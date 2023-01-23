@@ -1,0 +1,24 @@
+source ~/.vimrc
+
+" actions
+nnoremap <leader>h :action PreviousTab<CR>
+nnoremap <leader>l :action NextTab<CR>
+nnoremap <leader>en :action GotoNextError<CR>
+nnoremap <leader>ep :action GotoPreviousError<CR>
+nnoremap <leader><c-x> :action HideAllWindows<CR>
+
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+nnoremap ]] :action MethodDown<CR>
+nnoremap [[ :action MethodUp<CR>
+
+noremap <F4> class Module(CallableModule):/n    def __init__(self, name: Optional[str] = None):\n        super().__init__(name=name)\n\n    def inference(self, detections: List[Detection]) -> List[Detection]:\n        pass<CR>
+
+set ideajoin
+
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
